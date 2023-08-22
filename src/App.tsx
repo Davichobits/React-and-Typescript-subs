@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import { Form } from './components/Form'
+import { List } from './components/List'
 import './App.css'
 
 const INITIAL_STATE = [
@@ -37,19 +39,10 @@ function App() {
   return (
     <div>
       <h1>Subs</h1>
-      <ul>
-        {
-          subs.map(sub =>(
-            <li key={sub.nick}>
-              <img src={sub.avatar} alt={`Avatar for ${sub.nick}`} />
-              <div>
-                <h4>{`${sub.nick} (${sub.subMonths})`}</h4>
-                <p>{`${sub.description?.substring(0,53)}...`}</p>
-              </div>
-            </li>
-          ))
-        }
-      </ul>
+      <Form />
+      <List 
+        subs={subs}
+      />
     </div>
   )
 }
