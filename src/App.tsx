@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Form } from './components/Form'
 import { List } from './components/List'
+import { Sub } from './components/types'
 import './App.css'
 
 const INITIAL_STATE = [
@@ -17,13 +18,6 @@ const INITIAL_STATE = [
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptatum, iure nesciunt est impedit quaerat. Sunt tenetur suscipit nostrum nobis et. Eos sequi rerum minus, earum magnam corrupti autem et!'
   }
 ]
-
-interface Sub {
-  nick: string
-  subMonths: number
-  avatar: string
-  description?: string
-}
 
 interface AppState {
   subs: Array<Sub>
